@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+    <script>
+        function imported(){
+            if (document.forms["form1"].feedback.value == "")
+            {
+                alert("Please input a Value");
+                return false;
+            }
+            else
+            {
+                alert("Data imported successfully!!");
+            }
+        }
+        /*function wimported(){
+            if (document.forms['form1'].newords.value == "")
+            {
+                alert("Please input a Value");
+                return false;
+            }
+            else
+            {
+                alert("Word imported successfully!!")
+        }
+      }*/
+    </script>
+
+<style>
+    h1 {
+    color: red;
+    font-family: verdana;
+    font-size: 150%;
+
+}
+p  {
+    color: blue;
+    font-family: courier;
+    font-size: 160%;
+}
+table, tr, td {
+    border: 1px solid skyblue; padding-bottom: 1em;
+}
+input[type=text], select {
+    width: 50%;
+    padding: 15 px 20px;
+    margin: 8px 0;
+    /*display: inline-block;*/
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 10%;
+    background-color: #00bfff;
+    color: white;
+    padding: 14px 8px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+div {
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+if( $('#one').val().length > 0 && $('two').val().length > 0 ){
+    $('#submit1').prop('disabled', false);
+}
+else {
+    $('#submit1').prop('disabled', true);
+}
+</style>
+
+</head>
+
+<div style="text-align: center;"><img src="{{url_for('static',filename="sentimentanalysis.png")}}" alt="SentimentalAnalysis" height="350" width="750"
+<div style="text-align: center;"><h1>IDC Sentimental Analysis</h1>
+    <table width="100%">
+        <col width= "70%">
+
+        <tr>
+            <td valign ="top" table-layout:fixed>
+                <div style="text-align: center;"><p>Enter your feedback below:</p>
+                    <form name="form1" action ="http://127.0.0.1:5000"  method="POST">
+                        <select name="emotions">
+                            <option value="Positive"selected>Positive Feedback</option>
+                            <option value="Negative">Negative Feedback</option>
+                        </select></br></br>
+                        <textarea name="feedback" id="one" cols="100" rows="10" maxlength="max" placeholder="Enter the feedback here to create word cloud" style="resize:none"></textarea></br></br>
+                        <input type="submit" id="submit1" name="action" value="Import the data" width="20" style="center" onclick="imported()">
+                </div>
+            </td>
+            <!--<td valign ="top">
+                <div style="text-align: center;"><p>Enter the word:</p>
+                        <select name="words">
+                            <option value="Positive"selected>Positive Word</option>
+                            <option value="Negative">Negative Word</option>
+                        </select></br></br></br>
+                        <textarea name="newords" id="two" cols="30" rows="2" maxlength="20s" placeholder="Enter the word here" style="resize:none"></textarea></br></br></br>
+                        <input type="submit" id="submit2" name="action" value="Import the word" width="40" style="center" onclick="wimported()"></br>
+                    </form>
+                </div>
+            </td>-->
+        </tr>
+
+    </table>
+    </div>
+    <div style="text-align: center;">
+    <form action ="http://127.0.0.1:5000/output.html"  method="POST">
+        <input type="submit" name="action" value="Generate WordCloud" style="center;" width="50">
+    </form>
+    </div>
+</body>
+</html>

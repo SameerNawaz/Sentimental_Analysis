@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<style>
+h1 {
+    color: blue;
+    font-family: verdana;
+    font-size: 300%;
+
+}
+p  {
+    color: red;
+    font-family: courier;
+    font-size: 160%;
+}
+</style>
+</head>
+
+<form method='POST'>
+<div style="text-align: center;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7SnD8reQkAirqm-QbqgYIuDL964udg_E2fa82wBVw3wTHe-bXdw" alt="SentimentalAnalysis" height="150" width="350"></div></br>
+<div style="text-align: center;"><p>Data imported successfully</p>
+
+<select name="SentimentalAnalysis" onCharge="report(this.value)">
+  <option value="Postive">Positive Feedback</option>
+  <option value="Negative">Negative Feedback</option>
+  <option value="Neutral">Neutral Feedback</option>
+</select></br></br>
+
+<textarea textareaid="import" cols="50" rows="10" maxlength="max" placeholder="Enter the text here to create word cloud"></textarea></br></br>
+
+<button type="button">Import the data</button></br>
+
+</br><input type="submit" value="Generate Cloud" width="50"></br>
+</form>
+
+</body>
+</html>
