@@ -14,7 +14,7 @@
                 alert("Data imported successfully!!");
             }
         }
-        /*function wimported(){
+        function wimported(){
             if (document.forms['form1'].newords.value == "")
             {
                 alert("Please input a Value");
@@ -24,7 +24,7 @@
             {
                 alert("Word imported successfully!!")
         }
-      }*/
+        }
     </script>
 
 <style>
@@ -46,19 +46,19 @@ input[type=text], select {
     width: 50%;
     padding: 15 px 20px;
     margin: 8px 0;
-    /*display: inline-block;*/
+    display: inline-block;
     border: 2px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
 input[type=submit] {
-    width: 10%;
+    width: 30%;
     background-color: #00bfff;
     color: white;
-    padding: 14px 8px;
+    padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     cursor: pointer;
 }
 input[type=submit]:hover {
@@ -83,11 +83,11 @@ else {
 <div style="text-align: center;"><h1>IDC Sentimental Analysis</h1>
     <table width="100%">
         <col width= "70%">
-
+        
         <tr>
             <td valign ="top" table-layout:fixed>
                 <div style="text-align: center;"><p>Enter your feedback below:</p>
-                    <form name="form1" action ="http://127.0.0.1:5000"  method="POST">
+                    <form name="form1" action ="http://127.0.0.1:80"  method="POST">
                         <select name="emotions">
                             <option value="Positive"selected>Positive Feedback</option>
                             <option value="Negative">Negative Feedback</option>
@@ -96,7 +96,7 @@ else {
                         <input type="submit" id="submit1" name="action" value="Import the data" width="20" style="center" onclick="imported()">
                 </div>
             </td>
-            <!--<td valign ="top">
+            <td valign ="top">
                 <div style="text-align: center;"><p>Enter the word:</p>
                         <select name="words">
                             <option value="Positive"selected>Positive Word</option>
@@ -106,13 +106,13 @@ else {
                         <input type="submit" id="submit2" name="action" value="Import the word" width="40" style="center" onclick="wimported()"></br>
                     </form>
                 </div>
-            </td>-->
+            </td>
         </tr>
 
     </table>
     </div>
     <div style="text-align: center;">
-    <form action ="http://127.0.0.1:5000/output.html"  method="POST">
+    <form action ="/output.html"  method="POST">
         <input type="submit" name="action" value="Generate WordCloud" style="center;" width="50">
     </form>
     </div>

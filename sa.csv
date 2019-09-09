@@ -1,0 +1,56 @@
+sentiment,text
+Positive ,Test
+positive ,test
+"
+",
+Positive,test
+"
+",
+Positive,test
+"
+",
+Positive,test
+"
+",
+Positive,"good
+bad 
+awesome"
+"
+",
+Positive,good 
+"
+",
+Positive,good
+"
+",
+Positive,good good good good good 
+"
+",
+Positive,test
+"
+",
+Positive,awesome
+"
+",
+Positive,awesome
+"
+",
+Positive,Awesome
+"
+",
+Positive,bad
+"
+",
+Positive,rockstar
+"
+",
+Positive,rockstar
+"
+",
+Positive,rockstar rockstar rockstar
+"
+",
+Negative,lost
+"
+"
+Positive,great great great great 
